@@ -5,7 +5,7 @@ metadata:
 spec:
   source:
     git:
-      uri: https://github.com/peterajessup/cp4idemomq
+      uri: https://github.com/peterajessup/ibm-mq-custom-ivt
       ref: master
   strategy:
     type: Docker
