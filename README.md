@@ -6,8 +6,8 @@ The artifacts include a BuildConfig, an MQ QueueManager Object Custom resource d
 a route object associated with the channel created for access to the queue manager from outside the cluster.
 
 In addition, a tls key and cert is provided for the queue manager's keystore, and a secret should be created 
-using these artifacts. These files should also be used to create a keystore for the MQ client to connect, for simplicity.
-Alternatively you can fork this repository and use your own certs and keys.
+using these artifacts. These files should also be used to create a keystore for the MQ client to connect, or add your own
+key and certs for MQ clients, as required.  You you can fork this repository and use your own certs and keys.
 
 The configuration assumes an ImageStream object named mqivt exists on the cluster, in the mq namespace
 
@@ -26,7 +26,7 @@ oc create -f mqBuildConfig.yaml
 # Start the build
 oc start-build mqivt
 set +e
-# Delete the route object and secret for the QueuManager keystore (if any)
+# Delete the route object and secret for the QueueManager keystore (if any)
 oc delete route mq1route
 oc delete secret mq1key
 set -e
