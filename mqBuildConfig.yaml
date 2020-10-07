@@ -1,11 +1,11 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: mqivt 
+  name: vinivt 
 spec:
   source:
     git:
-      uri: https://github.com/peterajessup/ibm-mq-custom-ivt
+      uri: https://github.com/vineelay-bug/ibm-mq-custom-ivt.git
       ref: master
   strategy:
     type: Docker
