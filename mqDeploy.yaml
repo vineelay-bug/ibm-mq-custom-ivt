@@ -36,3 +36,4 @@ spec:
             - tls.crt
   imagePullSecrets:
     - name: default-dockercfg-hs4dm
+  imagePullPolicy:Always
